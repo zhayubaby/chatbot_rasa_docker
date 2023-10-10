@@ -19,11 +19,14 @@ First, check out the RASA document for docker running
     1. First download the entire project locally and open it in the IDE (take vscode as an example).  
 
     2. Open the terminal in vscode and enter the command 'docker-compose up -d' to deploy the docker container.  
-    <img width="505" alt="docker_2" src="https://github.com/zhayubaby/chatbot_rasa_docker/assets/121445047/0b468e65-adec-4bf6-b504-06c4155288d0">
+
+<img width="505" alt="docker_2" src="https://github.com/zhayubaby/chatbot_rasa_docker/assets/121445047/4d0b0954-e864-427d-a810-f3780f6c4391">
 
 
     3. The docker-compose.yml file is already in the project. After the deployment is completed, open docker desktop and the following effect will be displayed, which means success.  
-    <img width="1075" alt="docker_3" src="https://github.com/zhayubaby/chatbot_rasa_docker/assets/121445047/a06ef644-8783-4514-9134-75780316f843">  
+
+<img width="1075" alt="docker_3" src="https://github.com/zhayubaby/chatbot_rasa_docker/assets/121445047/78f64591-ce9f-4dd8-b322-e23177a228d4">
+
 
     4. Next, enable the chatbot action to run the container.  
 
