@@ -1,0 +1,93 @@
+Your input ->  hi (hello, hey...)
+Hey! How are you?
+What can I do for you?
+
+Your input ->  are you a bot?
+I am a bot, powered by Rasa.
+
+Your input ->  tell me a joke
+This is a joke.
+Is there anything else I can help you with, your highness?
+
+Your input ->  please tell me about the company(tell me about the company please, tell me about the company now)
+Our company, Mr.Brainiac is a for-profit online educational course provider which provides courses about AI and ML.
+Is there anything else I can help you with, your highness?
+
+Your input ->  I want to learn something about the courses in your company(I want to search for a course, I want to search for a course about AI/ML)
+Sure, I can help you find AI and Machine Learning courses. Which one are you interested in?
+
+(you have two paths, choose 'Artificial Intelligence' or 'Machine Learning')
+
+Your input ->  I want to get the info about the course Artificial Intelligence
+Great! Please provide the name of the Artificial Intelligence course you are looking for(Intro to AI, AI Superpowers, AI learning advanced for AI courses and ML Fundamentals, ML operation practice for ML courses).
+
+Your input ->  I want to know something about the course Machine Learning
+Great! Please provide the name of the Machine Learning course you are looking for(Intro to AI, AI Superpowers, AI learning advanced for AI courses and ML Fundamentals, ML operation practice for ML courses).
+
+(you have five paths, choose 'AI Superpowers', 'AI learning advanced', 'ML Fundamentals', 'ML operation practice' instead of 'Intro to AI')
+
+Your input ->  I want to learn about the course Intro to AI
+Here is some information about the Intro to AI course: {'subject': 'Artificial Intelligence', 'time': 'You need to learn 100 online hours and it can be teached in-person', 'description': 'This course provides a basic introduction to Artificial Intelligence.', 'teacher_in_charge': 'Mary Hernandez', 'learning_style': 'Online or in-person'}.
+
+Your input ->  I would like to learn about the course ML Fundamentals
+Here is some information about the ML Fundamentals course: {'subject': 'Machine Learning', 'time': 'You need to learn 60 online hours and it can be teached in-person', 'description': 'This course provides fundamental knowledge to Machine Learning.', 'teacher_in_charge': 'Joe Doe', 'learning_style': 'Online or in-person'}.
+
+Your input ->  I would like to learn about the course AI Superpowers
+Here is some information about the AI Superpowers course: {'subject': 'Artificial Intelligence', 'time': 'You need to learn 150 online hours and it can be teached in-person', 'description': "You can learn about the deeds of some people or countries who have made important contributions to promoting the development of AI in today's world.", 'teacher_in_charge': 'Stuart Russell', 'learning_style': 'Online or in-person'}.
+
+Your input ->  I would like to learn about the course AI learning advanced
+Here is some information about the AI learning advanced course: {'subject': 'Artificial Intelligence', 'time': 'You need to learn 200 online hours and it can be teached in-person', 'description': 'This course provides some advanced knowledge of AI algorithms and deep learning algorithms.', 'teacher_in_charge': 'Geoffrey Hinton', 'learning_style': 'Online or in-person'}.
+
+Your input ->  I would like to learn about the course ML operation practice
+Here is some information about the ML operation practice course: {'subject': 'Machine Learning', 'time': 'You need to learn 175 online hours and it can be teached in-person', 'description': 'This course provides practical knowledge about machine learning.', 'teacher_in_charge': 'Nick Bostrom', 'learning_style': 'Online or in-person'}.
+
+(you have five paths, choose 'AI Superpowers', 'AI learning advanced', 'ML Fundamentals', 'ML operation practice' instead of 'Intro to AI')
+(you have two paths, choose 'online' instead of 'in-person')
+
+Your input ->  I want to choose the course Intro to AI in in-person style
+The learning style of the course Intro to AI you choose is in-person, here is some extra detailed remarks: {'subject': 'Artificial Intelligence', 'teacher_in_charge': 'Mary Hernandez', 'remarks': 'No extra costs if chosen in-person.'}
+
+Your input ->  I want to choose the course ML Fundamentals in in-person style 
+The learning style of the course ML Fundamentals you choose is in-person, here is some extra detailed remarks: {'subject': 'Machine Learning', 'teacher_in_charge': 'Joe Doe', 'remarks': 'Charge extra $50 if chosen in-person.'}
+
+Your input ->  I want to choose the course AI learning advanced in in-person style
+The learning style of the course AI learning advanced you choose is in-person, here is some extra detailed remarks: {'subject': 'Artificial Intelligence', 'teacher_in_charge': 'Geoffrey Hinton', 'remarks': 'Charge extra $150 if chosen in-person.'}
+
+(you have five paths, choose 'Mary Hernandez', 'Stuart Russell', 'Geoffrey Hinton', 'Nick Bostrom' instead of 'John Doe')
+
+Your input ->  I want to get the information about the teacher John Doe
+The teacher you requested information about is John Doe. Here are the details: {'course_in_charge': 'ML Fundamentals', 'contact': 'john@brainiac.com'}.
+
+Your input ->  I want to get the information about the teacher Nick Bostrom
+The teacher you requested information about is Nick Bostrom. Here are the details: {'course_in_charge': 'ML operation practice', 'contact': 'nick@brainiac.com'}.
+
+Your input ->  Tell me about your subscription plans
+Brainiac offers several subscription plans to choose from. You can explore our one course free plan, pay as you go option, monthly plan with a 10-course limit, or our unlimited yearly plan. What would you like to know more about?
+
+(you have four paths, choose 'pay as you go', 'monthly', 'yearly' instead of 'one_course_free')
+
+Your input ->  I want to subscribe to the one_course_free plan
+Here is what you want to know about the one_course_free plan: Our free one-course plan allows you to access a single course for free. You can view up to three chapters of the course content.
+
+Your input ->  I would like to get some information about the monthly plan
+Here is what you want to know about the monthly plan: The monthly subscription plan costs $50 per month and allows you to access up to 10 courses each month. It's a great choice for those who want access to multiple courses.
+
+Your input ->  help with a problem(I'm facing an issue, there's an error, I need assistance, I have some problems with plan subscription, I have some problems with course choiceI have some problems with teachers)
+I'm sorry to hear you're facing an issue. I can help you resolve it in the following ways, Connect to a human supervisor and chat with them(choice 1). Provide your detailed query in an email(choice2). Speak to an executive right away over a phone call(choice 3). Please choose an option.
+
+(you have three paths, 'connect to supervisor', 'send an email', 'call me')
+
+Your input ->  connect to a supervisor(transfer to a human, speak to a person, supervisor assistance)
+I'm connecting you to our human supervisor, David Suarez. Please hold on for a moment.
+
+Your input ->  how to email a query(email support, query by email)
+If you prefer to email your query, you can send it to cusqueryhelp@brainiac.com. Please include as much detail as possible in your email, and our team will get back to you soon.
+
+Your input ->  call me(need a phone call, phone support, speak over the phone)
+If you'd like to speak to an executive over a phone call, please provide your phone number, and we'll arrange a call with one of our team members.
+
+Your input ->  shut up(I want to make a complaint, fuck, fuck you, your company is horrible, I cannot bear you, shut up, shit)
+I'm sorry for the trouble, if you have some problem or want to give some feedback, you can ask me to give you the email address of our senior manager(by typing such as 'I want to chat to your manager.').
+
+Your input ->  I want to chat to your manager(I must connect to your manager, tell me how to connect to your manager, tell me the email of your manager)
+I'm sorry for the trouble, you can contact our senior manager Mr.Tom Green at TomGreentg@outlook.com.
