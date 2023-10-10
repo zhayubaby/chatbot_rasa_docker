@@ -1,0 +1,163 @@
+version: "3.1"
+
+stories:
+
+- story: entertain me (happy path)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_give_options
+  - intent: tell_me_a_joke
+  - action: utter_joke 
+  - action: utter_anything_else
+  - or:
+    - intent: deny
+    - intent: goodbye
+  - action: utter_goodbye
+
+- story: company info
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_give_options
+  - intent: ask_company_info
+  - action: utter_company_info
+  - action: utter_anything_else
+  - intent: deny
+  - action: utter_goodbye
+
+- story: User wants to add a course
+  steps:
+  - intent: add_course
+  - action: action_add_course
+
+- story: User asks about courses
+  steps:
+  - intent: search_course
+  - action: utter_ask_course_type
+  - intent: inform_course_type
+    entities:
+    - course_type: Artificial Intelligence
+  - slot_was_set:
+    - course_type: Artificial Intelligence
+  - action: action_ask_course_name
+  - intent: inform_course_name
+    entities:
+    - course_name: Intro to AI
+  - slot_was_set:
+    - course_name: Intro to AI
+  - action: action_search_course
+  - intent: inform_course_learning_style
+    entities:
+    - course_name: Intro to AI
+    - course_learning_style: in-person
+  - slot_was_set:
+    - course_name: Intro to AI
+    - course_learning_style: in-person
+  - action: action_search_course_learning_style
+                                                                        
+- story: track order
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - action: utter_give_options
+    - intent: my_order
+    - action: utter_track_order
+    - intent: order_details
+      entities: 
+        - order_number: 0123
+    - slot_was_set:
+      - order_number: 0123
+    - action: query_order_details
+    - action: utter_anything_else
+    - intent: deny
+    - action: utter_goodbye
+
+- story: User wants to add a teacher
+  steps:
+    - intent: add_teacher
+    - action: action_add_teacher
+
+- story: query_teacher_info
+  steps:
+  - intent: ask_teacher_info
+  - action: utter_ask_teacher_info
+  - intent: query_teacher
+    entities:
+    - teacher_name: John Doe
+  - slot_was_set:
+    - teacher_name: John Doe
+  - action: action_query_teacher_info
+
+- story: User Selects the subscription Plan
+  steps:
+  - intent: explore_subscription
+  - action: utter_subscription_options
+  - intent: select_subscription_plan
+    entities:
+    - subscription_plan: one_course_free
+  - slot_was_set:
+    - subscription_plan: one_course_free
+  - action: action_subscription_plan
+
+- story: Customer complaints
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_give_options
+  - intent: customer_complaint
+  - action: utter_complaint_reply
+  - intent: customer_want_chat
+  - action: action_utter_reply
+
+- story: User Faces an Issue and Seeks Help path 1
+  steps:
+  - intent: issue_help
+  - action: utter_iusse_help
+  - intent: connect_to_supervisor
+  - action: action_connect_to_supervisor
+
+- story: User Faces an Issue and Seeks Help path 2
+  steps:
+  - intent: issue_help
+  - action: utter_iusse_help
+  - intent: email_query
+  - action: action_email_query_instructions
+
+- story: User Faces an Issue and Seeks Help path 3
+  steps:
+  - intent: issue_help
+  - action: utter_iusse_help
+  - intent: phone_call_query
+  - action: action_phone_call_query_instructions
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_give_options
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_give_options
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_give_options
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+

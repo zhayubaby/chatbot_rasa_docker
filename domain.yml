@@ -1,0 +1,143 @@
+version: '3.1'
+intents:
+- add_course
+- add_teacher
+- affirm
+- ask_company_info
+- ask_teacher_info
+- bot_challenge
+- deny
+- goodbye
+- greet
+- inform_course_name
+- inform_course_type
+- inform_course_learning_style
+- mood_great
+- mood_unhappy
+- my_order
+- order_details
+- query_teacher
+- search_course
+- explore_subscription
+- select_subscription_plan
+- customer_complaint
+- customer_want_chat
+- issue_help
+- connect_to_supervisor
+- email_query
+- phone_call_query
+- tell_me_a_joke
+responses:
+  utter_give_options:
+  - text: What can I do for you?
+  utter_joke:
+  - text: This is a joke.
+  utter_company_info:
+  - text: Our company, Mr.Brainiac is a for-profit online educational course provider which provides courses about AI and ML.
+  utter_track_order:
+  - text: Please provide your order number.
+  utter_teacher_info:
+  - text: 'The teacher you requested information about is {teacher_name}. Here are the details: {teacher_info}.'
+  utter_ask_teacher_info:
+  - text: Our company has the teacher John Doe to the course Machine Learning and Mary Hernandez to the course AI.Please provide the name of the teacher you want to know about.
+  utter_ask_course_type:
+  - text: Sure, I can help you find AI and Machine Learning courses. Which one are you interested in?
+  utter_ask_course_name:
+  - text: Great! Please provide the name of the {course_type} course you are looking for(Intro to AI, AI Superpowers, AI learning advanced for AI courses and ML Fundamentals, ML operation practice for ML courses).
+  utter_course_not_found:
+  - text: I couldn't find any courses matching your criteria.
+  utter_give_course_info:
+  - text: 'Here is some information about the {course_name} course: {course_info}.'
+  utter_subscription_options:
+  - text: Brainiac offers several subscription plans to choose from. You can explore our one course free plan, pay as you go option, monthly plan with a 10-course limit, or our unlimited yearly plan. What would you like to know more about?
+  utter_subscription_plan_info:
+  - text: 'Here is what you want to know about the {subscription_plan} plan: {subscription_plan_info}.'
+  utter_complaint_reply:
+  - text: I'm sorry for the trouble, if you have some problem or want to give some feedback, you can ask me to give you the email address of our senior manager(by typing such as 'I want to chat to your manager.').
+  utter_iusse_help:
+  - text: I'm sorry to hear you're facing an issue. I can help you resolve it in the following ways, Connect to a human supervisor and chat with them(choice 1). Provide your detailed query in an email(choice2). Speak to an executive right away over a phone call(choice 3). Please choose an option.
+  utter_greet:
+  - text: Hey! How are you?
+  utter_anything_else:
+  - text: Is there anything else I can help you with, your highness?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_feedback:
+  - text: How was your experience with me?
+  utter_login_wrong:
+  - text: 404 error, Please try again
+entities:
+- subscription_plan
+- course_name
+- course_type
+- course_learning_style
+- name
+- order_number
+- teacher_name
+actions:
+- action_add_course
+- utter_ask_course_type
+- action_ask_course_name
+- action_search_course
+- action_search_course_learning_style
+- utter_subscription_options
+- action_subscription_plan
+- query_order_details
+- action_add_teacher
+- utter_ask_teacher_info
+- action_query_teacher_info
+- utter_complaint_reply
+- action_utter_reply
+- utter_iusse_help
+- action_connect_to_supervisor
+- action_email_query_instructions
+- action_phone_call_query_instructions
+slots:
+  order_number:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: order_number
+  teacher_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: teacher_name
+  course_type:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: course_type
+  course_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: course_name
+  course_learning_style:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: course_learning_style
+  subscription_plan:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: subscription_plan
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

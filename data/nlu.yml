@@ -1,0 +1,250 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - nope
+    - I don't want to give the feedbackplease
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: tell_me_a_joke
+  examples: |
+    - tell me a joke
+    - say something funny
+    - tell me something funny
+    - tell me a joke please
+    - can you tell me a joke
+    - I want to hear a joke
+    - make me laugh
+    - I want to laugh
+    - can you tell me something funny
+    - I want to hear something funny
+    - I want to hear a joke please
+    - I want to hear a joke now
+    - I want to hear a joke right now
+    - I want to hear a joke right now please
+    - I want to hear a joke now pl
+- intent: ask_company_info
+  examples: |
+    - please tell me about the company
+    - tell me about the company
+    - tell me about the company please
+    - tell me about the company now
+- intent: add_course
+  examples: |
+    - I want to add a course
+    - I want to add a course to the company
+    - I want to add an AI course to the company
+- intent: search_course
+  examples: |
+    - I want to search for a course
+    - I want to learn something about the courses in your company
+    - I want to learn something about the courses
+    - I want to search for a course about AI
+    - I want to search for a course about ML
+- intent: inform_course_type
+  examples: |
+    - I want to get the info about the course [Artificial Intelligence](course_type)
+    - I want to know something about the course [Machine Learning](course_type)
+- intent: inform_course_name
+  examples: |
+    - I want to learn about the course [Intro to AI](course_name)
+    - I want to learn about the course [ML Fundamentals](course_name)
+    - I want to learn about the course [AI Superpowers](course_name)
+    - I want to learn about the course [AI learning advanced](course_name)
+    - I want to learn about the course [ML operation practice](course_name)
+    - I would like to learn about the course [Intro to AI](course_name)
+    - I would like to learn about the course [ML Fundamentals](course_name)
+    - I would like to learn about the course [AI Superpowers](course_name)
+    - I would like to learn about the course [AI learning advanced](course_name)
+    - I would like to learn about the course [ML operation practice](course_name)
+- intent: inform_course_learning_style
+  examples: |
+    - I want to choose the course [Intro to AI](course_name) in [in-person](course_learning_style) style
+    - I want to choose the course [ML Fundamentals](course_name) in [in-person](course_learning_style) style
+    - I want to choose the course [AI Superpowers](course_name) in [in-person](course_learning_style) style
+    - I want to choose the course [AI learning advanced](course_name) in [in-person](course_learning_style) style
+    - I want to choose the course [ML operation practice](course_name) in [in-person](course_learning_style) style
+    - I would like to choose the course [Intro to AI](course_name) in [online](course_learning_style) style
+    - I would like to choose the course [ML Fundamentals](course_name) in [online](course_learning_style) style
+    - I would like to choose the course [AI Superpowers](course_name) in [online](course_learning_style) style
+    - I would like to choose the course [AI learning advanced](course_name) in [online](course_learning_style) style
+    - I would like to choose the course [ML operation practice](course_name) in [online](course_learning_style) style
+
+- intent: my_order
+  examples: |
+    - I want to check my order
+    - Can you help me with my order?
+- intent: order_details
+  examples: |
+    - My order number is [0123](order_number)
+    - Here's my order number [0456](order_number)
+    - [0756](order_number)
+    - Order number is [0332](order_number)
+    - Order number is [0435](order_number)
+    - Here is the order_number [0465](order_number)
+    - [0123](order_number)
+    - [0456](order_number)
+    - [0987](order_number)
+- intent: add_teacher
+  examples: |
+    - I want to add a teacher
+    - I want to add a teacher to the course
+    - I want to add a teacher to the course AI
+- intent: ask_teacher_info
+  examples: |
+    - I want to get the information about the teachers in the company
+    - I want to get the teachers to the course
+    - I want to get the teachers to the course AI
+- intent: query_teacher
+  examples: |
+    - I want to get the information about the teacher [John Doe](teacher_name)
+    - I want to get the information about the teacher [Mary Hernandez](teacher_name)
+    - I want to get the information about the teacher [Stuart Russell](teacher_name)
+    - I want to get the information about the teacher [Geoffrey Hinton](teacher_name)
+    - I want to get the information about the teacher [Nick Bostrom](teacher_name)
+
+- intent: explore_subscription
+  examples: |
+    - Tell me about your subscription plans
+    - What are your subscription options?
+    - How can I subscribe to your courses?
+- intent: select_subscription_plan
+  examples: |
+    - I want to subscribe to the [one_course_free](subscription_plan) plan
+    - I want to subscribe to the [pay as you go](subscription_plan) plan
+    - I want to subscribe to the [monthly](subscription_plan) plan
+    - I want to subscribe to the [yearly](subscription_plan) plan
+    - I would like to get some information about the [one_course_free](subscription_plan) plan
+    - I would like to get some information about the [pay as you go](subscription_plan) plan
+    - I would like to get some information about the [monthly](subscription_plan) plan
+    - I would like to get some information about the [yearly](subscription_plan) plan
+
+- intent: customer_complaint
+  examples: |
+    - I want to make a complaint
+    - I want to make a complaint about the company
+    - I want to make a complaint about the course
+    - I want to make a complaint about the teacher
+    - I want to make a complaint about the subscription plan
+    - fuck
+    - fuck you
+    - your company is horrible
+    - I cannot bear you
+    - shut up
+    - shit
+
+- intent: customer_want_chat
+  examples: |
+    - I want to chat to your manager
+    - I must connect to your manager
+    - tell me how to connect to your manager
+    - tell me the email of your manager
+
+- intent: issue_help
+  examples: |
+    - I'm facing an issue
+    - help with a problem
+    - there's an error
+    - I need assistance
+    - I have some problems with plan subscription
+    - I have some problems with course choice
+    - I have some problems with teachers
+
+- intent: connect_to_supervisor
+  examples: |
+    - connect to a supervisor
+    - transfer to a human
+    - speak to a person
+    - supervisor assistance
+
+- intent: email_query
+  examples: |
+    - send an email
+    - how to email a query
+    - email support
+    - query by email
+
+- intent: phone_call_query
+  examples: |
+    - speak over the phone
+    - call me
+    - need a phone call
+    - phone support
