@@ -1,12 +1,100 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rasa Web Chatbot</title>
-  </head>
-  <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./RASA.jpg" type="image/x-icon">
+    <title>RASA Chatbot For Mr.Brainiac</title>
+    <style>
+        body {
+            background-image: url('./background.jpg'); 
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        .container {
+            max-width: 700px;
+            margin-left: 100px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+        .container_2 {
+            max-width: 600px;
+            margin-left: 50px;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+        .containers-wrapper {
+            display: flex;
+            justify-content: space-between;
+        }
+        .container, .container_2 {
+            flex: 1;
+            margin: 50px; 
+        }
+        h1 {
+            text-align: center;
+        }
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
     <h1>Rasa Web Chatbot</h1>
+    <div class="containers-wrapper">
+        <div class="container">
+            <h1>Welcome to Mr. Brainiac</h1>
+            <p>Mr. Brainiac is a leading education company specializing in AI and machine learning courses. Our mission is to empower students with the knowledge and skills to excel in the rapidly evolving field of Artificial Intelligence and Machine Learning.</p>
+            <p>We offer a range of courses, including AI and ML related:</p>
+            <ul>
+                <li>Intro to AI</li>
+                <li>AI Superpowers</li>
+                <li>AI Learning Advanced for AI Courses</li>
+                <li>ML Fundamentals</li>
+                <li>ML Operation Practice for ML Courses</li>
+            </ul>
+            <p>Our esteemed instructors include:</p>
+            <ul>
+                <li>Mary Hernandez</li>
+                <li>Stuart Russell</li>
+                <li>Geoffrey Hinton</li>
+                <li>Nick Bostrom</li>
+                <li>John Doe</li>
+            </ul>
+            <p>Our courses are offered in two learning styles, including:</p>
+            <ul>
+                <li>in-person(may have extra costs) </li>
+                <li>online(no extra charge)</li>
+            <p>If you have any questions or need further information, please contact our supervisor, Tom Green, at <a href="mailto:TomGreentg@outlook.com">TomGreentg@outlook.com</a>.</p>
+        </div>
+        <div class="container_2">
+            <h1>Questions Guide</h1>
+            <p>You may ask the following questions.</p>
+            <ul>
+                <li>are you a bot?</li>
+                <li>tell me a joke</li>
+                <li>tell me about the company now</li>
+                <li>I want to learn something about the courses in your company</li>
+                <li>I want to get the info about the course xxx(AI or ML)
+                <li>I want to learn about the course xxx(refer to the course lists on the left)</li>
+                <li>I want to choose the course xxx in xxx(refer to the learning style list on the left) style </li>
+                <li>what is the price of the course xxx</li>
+                <li>I want to get the information about the teacher xxx(refer to the teachers list on the left)</li>
+                <li>Tell me about your subscription plans</li>
+                <li>I want to subscribe to the one_course_free plan</li>
+                <li>I want to subscribe to the pay as you go plan</li>
+                <li>I want to subscribe to the monthly(yearly) plan</li>
+                <li>help with a problem(I'm facing an issue)</li>
+                <li>I want to chat to your manager</li>
+            </ul>
+        </div>
+    </div>
     <div id="rasa-chat-widget" data-websocket-url="http://localhost:8088/socket.io" data-default-open="true" data-initial-payload="hi"></div>
     <script src="https://unpkg.com/@rasahq/rasa-chat" type="application/javascript"></script>
-  </body>
+</body>
+</html>
